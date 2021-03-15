@@ -64,3 +64,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #追記 0315 k.nomura
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'bcrypt', '3.1.11'
