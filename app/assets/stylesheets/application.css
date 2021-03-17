@@ -29,23 +29,35 @@ body {
 
 header {
   height: 50px;
-  background-color: #333333;
+  background-color: #405D9B;
   margin: 0px;
   padding: 0px;
 }
+header p{
+  float: left;
+  color: #FFFF;
+  margin:10px 30px 0px 0px;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+
+
 header ul {
   list-style: none;
 }
 header ul a {
-  color: #fff;
+  color: #FFFF;
   text-decoration: none;
 }
 header a {
-    /* 上右下左 pxないと効かなかった*/
-    margin:10px 30px 0px 0px;
+  color: #FFFFFF;
+  /* 上右下左 pxないと効かなかった*/
+  margin:10px 30px 0px 0px;
 }
 header a {  /* 【注意】 liと.leftに隙間開けない */
-  float: left;
+  float: right;
+  text-decoration: none;
 }
 header ul div.right-group {  /* 右寄せfloatの順番対処※1 */
   float: right;
@@ -82,7 +94,7 @@ header ul:after {  /* ★怪しい liのfloatのclearafix? */
 
 /* ここから */
 .view_part {  /* ここもfloatがいるように思う⇒不要。table*/
-  height: 400px;
+  height: 600px;
   background-color: #D3D3D3;
   padding: 30px;
 }
