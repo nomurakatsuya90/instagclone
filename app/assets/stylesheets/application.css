@@ -50,6 +50,14 @@ header ul a {
   color: #FFFF;
   text-decoration: none;
 }
+
+.index-img {
+  width: 200px;
+  height: 100px;
+  }
+
+
+
 header a {
   color: #FFFFFF;
   /* 上右下左 pxないと効かなかった*/
