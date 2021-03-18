@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get 'sessions/new'
+  # get 'favorites/index'  #コメントアウト 0318 k.nomura
+  # get 'sessions/new'  #コメントアウト 0318 k.nomura
   resources :pictures do
     collection do
       post :confirm
@@ -8,4 +9,5 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :create, :show]
   resources :sessions, only: [:new, :create, :destroy]
   root to: 'pictures#index'
+  resources :favorites, only: [:create, :destroy, :index]
 end
