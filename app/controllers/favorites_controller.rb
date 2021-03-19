@@ -1,5 +1,7 @@
 class FavoritesController < ApplicationController
   def index
+    # @pictures = Picture.all
+    @pictures = current_user.favorite_pictures
   end
   def create
     favorite = current_user.favorites.create(picture_id: params[:picture_id])
