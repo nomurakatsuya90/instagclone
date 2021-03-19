@@ -1,3 +1,5 @@
 <h1><%= @user.name %>のページ</h1>
 <p>メールアドレス: <%= @user.email %></p>
 <p><%= link_to 'picture画面へ', pictures_path %></p>
+<br>
+<td><%= link_to 'Edit', edit_user_path(@user) %></td>
