@@ -26,6 +26,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
 
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  #追記 0319 k.nomura
+  gem 'dotenv-rails'
 end
 
 group :development do
