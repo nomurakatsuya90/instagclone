@@ -1,4 +1,5 @@
 class FavoritesController < ApplicationController
+
   def index
     # @pictures = Picture.all
     @pictures = current_user.favorite_pictures

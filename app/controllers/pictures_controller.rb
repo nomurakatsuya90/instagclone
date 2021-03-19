@@ -1,5 +1,6 @@
 class PicturesController < ApplicationController
   before_action :set_picture, only: %i[ show edit update destroy ]
+  before_action :guard_action_not_current_user, only: [:edit, :update, :destroy]
 
   # GET /pictures or /pictures.json
   def index
@@ -75,4 +76,10 @@ class PicturesController < ApplicationController
     def picture_params
       params.require(:picture).permit(:image, :comment, :image_cache) # :user_id
     end
+
+  def guard_action_not_current_user
+    if current_user.id != @picture.user_id
+      redirect_to pictures_path, notice:"他の方のpictureは変更できません"
+    end
+  end
 end
