@@ -23,6 +23,14 @@
     <%= f.password_field :password %>
     <%= f.label :password_confirmation %>
     <%= f.password_field :password_confirmation %>
+    <div>
+    <%= f.label :image %>
+      <%= f.file_field :image %> 
+    </div>
   <%# <% end %>
-  <%= f.submit "Create my account" %>
+  <% if action_name == 'new' %>
+    <%= f.submit "Create my account" %>
+  <% else %>
+    <%= f.submit "Update my account" %>    
+   <% end %>      
 <% end %>

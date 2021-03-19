@@ -1,5 +1,13 @@
 <h1><%= @user.name %>のページ</h1>
 <p>メールアドレス: <%= @user.email %></p>
+<div>
+<% if @user.image.url != nil %>
+  <p>
+    <strong>Image:</strong><br>
+    <%= image_tag @user.image.url %>
+  </p>
+<% end %>
+</div>
 <p><%= link_to 'picture画面へ', pictures_path %></p>
 <br>
 <td><%= link_to 'Edit', edit_user_path(@user) %></td>
