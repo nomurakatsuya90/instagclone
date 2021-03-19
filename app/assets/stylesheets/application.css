@@ -29,7 +29,8 @@ body {
 
 header {
   height: 50px;
-  background-color: #405D9B;
+  background: linear-gradient(to right, red, pink);
+  /* background-color: #405D9B; */
   margin: 0px;
   padding: 0px;
 }
@@ -102,8 +103,8 @@ header ul:after {  /* ★怪しい liのfloatのclearafix? */
 
 /* ここから */
 .view_part {  /* ここもfloatがいるように思う⇒不要。table*/
-  height: 600px;
-  background-color: #D3D3D3;
+  /* height: 600px; */
+  background-color: #fad1f8;
   padding: 30px;
 }
 
