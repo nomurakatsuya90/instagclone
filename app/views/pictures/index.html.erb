@@ -15,7 +15,9 @@
   <tbody>
     <% @pictures.each do |picture| %>
       <tr>
-        <td><%= image_tag picture.image.url , class: "index-img" %></td>
+        <% if picture.image.url != nil %>
+          <td><%= image_tag picture.image.url , class: "index-img" %></td>
+        <% end %>
         <td><%= picture.comment %></td>
         <td><%= picture.user&.name %></td>
         <td><%= link_to 'Show', picture %></td>

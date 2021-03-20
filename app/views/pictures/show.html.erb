@@ -2,7 +2,9 @@
 
 <p>
   <strong>Image:</strong>
-  <%= image_tag @picture.image.url %>
+  <% if @picture.image.url != nil %>
+    <%= image_tag @picture.image.url %>
+  <% end %>
 </p>
 <p class = "dateil-top">
   <strong>Comment:</strong>
