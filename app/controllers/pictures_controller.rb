@@ -20,8 +20,13 @@ class PicturesController < ApplicationController
       @picture = Picture.new
     end
   end
+
   def confirm
     @picture = current_user.pictures.build(picture_params)
+    if @picture.image.url == nil
+      flash.now[:alert] = '写真を指定してください。'
+      render :new
+    end
     render :new if @picture.invalid?
   end
 
@@ -32,7 +37,6 @@ class PicturesController < ApplicationController
   # POST /pictures or /pictures.json
   def create
     @picture = current_user.pictures.build(picture_params)
-
     respond_to do |format|
       if @picture.save
         format.html { redirect_to @picture, notice: "Picture was successfully created." }
