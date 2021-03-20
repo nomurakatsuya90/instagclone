@@ -1,5 +1,29 @@
 ---
 ja:
+  application:
+    label_home: 'ホーム'
+    label_favorite_feeds: 'お気に入り一覧'
+    label_new_feed: '新規投稿'
+    confirm: 'プロフィール'
+    label_logout: 'ログアウト'
+    User: 'ユーザー'
+    Comment: 'コメント'
+    Image: '写真'
+    Back: '戻る'
+  favorites:
+    FavoritePictures: 'お気に入り写真'
+  pictures:
+    Confirm: '確認画面'
+    Pictures: '投稿写真'
+    Image: '写真'
+    Comment: 'コメント'
+    User: 'ユーザー'
+    New Picture: '新しい写真'
+    Editing Picture: '写真の編集'
+  users:
+    User Edit: 'ユーザーの編集'
+    Sign up: 'サインアップ'
+    Log in: 'ログイン'
   activerecord:
     errors:
       messages:

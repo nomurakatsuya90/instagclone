@@ -1,13 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Image:</strong>
+  <strong><%= t('pictures.Image') %>:</strong>
   <% if @picture.image.url != nil %>
     <%= image_tag @picture.image.url %>
   <% end %>
 </p>
 <p class = "dateil-top">
-  <strong>Comment:</strong>
+  <strong><%= t('pictures.Comment') %>:</strong>
   <%= @picture.comment%>
 </p>
 <%# 追記 0318 k.nomura %>
