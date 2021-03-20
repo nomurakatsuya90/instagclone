@@ -10,4 +10,6 @@
 </div>
 <p><%= link_to 'picture画面へ', pictures_path %></p>
 <br>
-<td><%= link_to 'Edit', edit_user_path(@user) %></td>
+<% if current_user.id == @user.id %>
+  <td><%= link_to 'Edit', edit_user_path(@user) %></td>
+<% end %>

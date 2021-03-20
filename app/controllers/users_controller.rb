@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   skip_before_action :login_required, only: [:new, :create]
   before_action :set_user, only: %i[ show edit update ]
+  before_action :guard_action_not_current_user, only: [:edit, :update]
 
   def new
     @user = User.new
@@ -40,5 +41,11 @@ class UsersController < ApplicationController
   # end
   def set_user
     @user = User.find(params[:id])
+  end
+
+  def guard_action_not_current_user
+    if current_user.id != @user.id
+      redirect_to user_path(@user.id), notice:"他の方のprofileは変更できません"
+    end
   end
 end
